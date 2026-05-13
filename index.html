@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novza Eshiklari | Premium Eshiklar</title>
+    <link rel="preconnect" href="https://api.telegram.org">
+    <link rel="preload" as="image" href="ruler.png">
     <style>
         :root{--bg:#021E1B;--text:#fff;--muted:#8ea39e;--gold:#fde2b4;--gold2:#f4d39c;--card:#001D1A;--border:rgba(253,226,180,0.15);--input:#ECECEC}
         *{margin:0;padding:0;box-sizing:border-box}
@@ -44,7 +46,10 @@
         .fc::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:#06564D;filter:blur(100px);border-radius:50%;z-index:-1;pointer-events:none}
         .ft{font-size:20px;font-weight:500;text-align:center;margin-bottom:28px;line-height:1.4}
         .fg{margin-bottom:18px}
+        .pw{position:relative;display:flex;align-items:center}
+        .flag{position:absolute;left:16px;font-size:18px;pointer-events:none}
         .fi{width:100%;background:var(--input);border:1px solid var(--border);border-radius:8px;padding:16px 20px;color:#636363;font-size:14px;outline:none;transition:all .3s}
+        .pi{padding-left:45px}
         .fi::placeholder{color:#636363}
         .fi:focus{border-color:var(--gold);box-shadow:0 0 10px rgba(253,226,180,0.1)}
         .btn{width:100%;background:linear-gradient(135deg,#fcebc9,#f4d39c);color:var(--bg);border:none;border-radius:8px;padding:18px;font-size:15px;font-weight:600;cursor:pointer;transition:all .3s;margin-top:5px;box-shadow:0 4px 15px rgba(253,226,180,0.2)}
@@ -162,7 +167,10 @@
                 <h3 class="ft">Bepul o'lchov xizmatiga<br>ro'yxatdan o'ting</h3>
                 <form id="leadForm">
                     <div class="fg"><input type="text" id="name" class="fi" placeholder="Ismingiz" required></div>
-                    <div class="fg"><input type="tel" id="phone" class="fi" placeholder="Telefon raqamingiz" required></div>
+                    <div class="fg pw">
+                        <span class="flag">🇺🇿</span>
+                        <input type="tel" id="phone" class="fi pi" placeholder="Telefon raqamingiz" required>
+                    </div>
                     <div class="fg"><input type="text" id="amount" class="fi" placeholder="Nechta eshik olmoqchisiz ?" required></div>
                     <button type="submit" class="btn" id="submitBtn">
                         <span id="btnText">Ro'yxatdan o'tish</span>
