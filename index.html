@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novza Eshiklari | Premium Eshiklar</title>
     <style>
-        :root{--bg:#011410;--text:#fff;--muted:#8ea39e;--gold:#fde2b4;--gold2:#f4d39c;--card:rgba(3,23,20,0.6);--border:rgba(9,60,50,0.5);--input:#011e18}
+        :root{--bg:#011410;--text:#fff;--muted:#8ea39e;--gold:#fde2b4;--gold2:#f4d39c;--card:rgba(5,35,28,0.4);--border:rgba(253,226,180,0.15);--input:#011e18}
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Aral',Arial,sans-serif;background:radial-gradient(circle at top right,#022d25,#01120f 80%);background-color:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
         .c{max-width:1200px;margin:0 auto;padding:0 20px;width:100%}
@@ -16,8 +16,8 @@
         .logo-e{font-size:8px;color:var(--gold);letter-spacing:4px;font-style:italic}
         .logo-t{font-size:24px;font-weight:700;color:var(--gold);line-height:1}
         .logo-s{font-size:10px;color:var(--gold);letter-spacing:6px;margin-top:3px}
-        .ph{display:inline-flex;align-items:center;padding:12px 24px;border:1.5px solid var(--gold);border-radius:10px;color:var(--text);text-decoration:none;font-size:14px;font-weight:500;background:rgba(253,226,180,0.08);box-shadow:0 0 20px rgba(253,226,180,0.1);transition:all .3s}
-        .ph:hover{background:rgba(253,226,180,0.15);box-shadow:0 0 30px rgba(253,226,180,0.2)}
+        .ph{display:inline-flex;align-items:center;padding:12px 24px;border:1px solid rgba(253,226,180,0.4);border-radius:10px;color:var(--text);text-decoration:none;font-size:14px;font-weight:500;background:rgba(253,226,180,0.05);transition:all .3s}
+        .ph:hover{background:rgba(253,226,180,0.15);box-shadow:0 0 15px rgba(253,226,180,0.2)}
 
         /* HERO */
         .hero{display:flex;justify-content:space-between;align-items:flex-start;padding:50px 0 80px;gap:60px}
@@ -34,36 +34,36 @@
 
         /* RULER */
         .ruler{display:flex;align-items:center;gap:20px}
-        .ri{width:140px;height:80px;flex-shrink:0}
+        .ri{width:120px;height:60px;flex-shrink:0;background:rgba(0,0,0,0.2);border-radius:8px;overflow:hidden;display:flex;justify-content:center;align-items:center}
         .ri img{width:100%;height:100%;object-fit:contain}
         .rt{font-size:15px;line-height:1.5}
 
         /* FORM */
         .hero-r{width:420px;flex-shrink:0}
-        .fc{background:rgba(5,35,28,0.85);border:1.5px solid rgba(253,226,180,0.25);border-radius:18px;padding:40px;backdrop-filter:blur(20px);box-shadow:0 0 40px rgba(253,226,180,0.08),0 8px 32px rgba(0,0,0,0.3)}
+        .fc{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:40px;backdrop-filter:blur(20px)}
         .ft{font-size:20px;font-weight:500;text-align:center;margin-bottom:28px;line-height:1.4}
         .fg{margin-bottom:18px}
-        .fi{width:100%;background:var(--input);border:1px solid var(--border);border-radius:8px;padding:16px 20px;color:var(--text);font-size:15px;outline:none;transition:all .3s}
+        .fi{width:100%;background:var(--input);border:1px solid var(--border);border-radius:8px;padding:16px 20px;color:var(--text);font-size:14px;outline:none;transition:all .3s}
         .fi::placeholder{color:#4a635e}
         .fi:focus{border-color:var(--gold);box-shadow:0 0 10px rgba(253,226,180,0.1)}
-        .btn{width:100%;background:linear-gradient(135deg,#fcebc9,#f4d39c);color:var(--bg);border:none;border-radius:10px;padding:18px;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;margin-top:8px;box-shadow:0 4px 20px rgba(253,226,180,0.3);letter-spacing:0.5px}
-        .btn:hover{transform:translateY(-2px);box-shadow:0 6px 30px rgba(253,226,180,0.45)}
+        .btn{width:100%;background:linear-gradient(135deg,#fcebc9,#f4d39c);color:var(--bg);border:none;border-radius:8px;padding:18px;font-size:15px;font-weight:600;cursor:pointer;transition:all .3s;margin-top:5px;box-shadow:0 4px 15px rgba(253,226,180,0.2)}
+        .btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(253,226,180,0.3)}
         .btn:active{transform:translateY(0)}
 
         /* FOOTER */
-        footer{border-top:1px solid rgba(255,255,255,0.05);padding:35px 0;margin-top:auto}
-        .fcon{display:flex;justify-content:space-between;align-items:center}
-        .fl{display:flex;align-items:center;gap:18px}
-        .fd{max-width:180px;font-size:11px;color:var(--muted);line-height:1.4}
-        .fr{display:flex;gap:35px;align-items:center}
-        .ci{display:flex;align-items:center;gap:12px}
-        .cic{width:36px;height:36px;background:var(--gold);border-radius:8px;display:flex;justify-content:center;align-items:center;flex-shrink:0}
-        .cic svg{width:18px;height:18px;fill:var(--bg)}
-        .ct{font-size:13px;font-weight:500}
-        .cd{font-size:11px;color:var(--muted)}
-        .so{display:flex;gap:8px}
-        .sl{width:38px;height:38px;background:var(--gold);border-radius:10px;display:flex;justify-content:center;align-items:center;transition:opacity .3s}
-        .sl svg{width:18px;height:18px;fill:var(--bg)}
+        footer{border-top:1px solid rgba(255,255,255,0.05);padding:40px 0;margin-top:auto}
+        .fcon{display:flex;justify-content:space-between;align-items:flex-start}
+        .fl{display:flex;align-items:center;gap:25px}
+        .fd{max-width:160px;font-size:12px;color:var(--muted);line-height:1.4}
+        .fr{display:flex;gap:40px;align-items:center}
+        .ci{display:flex;align-items:center;gap:15px}
+        .cic{width:42px;height:42px;background:var(--gold);border-radius:12px;display:flex;justify-content:center;align-items:center;flex-shrink:0}
+        .cic svg{width:20px;height:20px;fill:var(--bg)}
+        .ct{font-size:14px;font-weight:500;margin-bottom:4px}
+        .cd{font-size:12px;color:var(--muted)}
+        .so{display:flex;gap:12px}
+        .sl{width:42px;height:42px;background:var(--gold);border-radius:12px;display:flex;justify-content:center;align-items:center;transition:opacity .3s}
+        .sl svg{width:20px;height:20px;fill:var(--bg)}
         .sl:hover{opacity:.8}
 
         /* OVERLAY */
@@ -78,18 +78,44 @@
 
         /* ===== MOBILE ===== */
         @media(max-width:992px){
-            header{flex-direction:column;gap:15px;padding:25px 0}
-            .hero{flex-direction:column;padding:30px 0 40px;gap:30px}
-            .hero-l{max-width:100%;text-align:center}
-            h1{font-size:30px;margin-bottom:30px}
-            .stats{flex-direction:column;gap:12px}
-            .ruler{flex-direction:column;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:25px 20px;margin-top:10px}
-            .ri{width:160px;height:90px}
-            .hero-r{width:100%;max-width:100%}
-            .fc{padding:30px 20px}
-            .fcon{flex-direction:column;gap:25px;text-align:center}
-            .fl{flex-direction:column}
-            .fr{flex-direction:column;gap:15px}
+            header{padding:20px 0;flex-direction:row} /* KEEP ROW! */
+            .logo-t{font-size:16px}
+            .logo-s{font-size:7px;letter-spacing:4px}
+            .logo-e{font-size:6px}
+            .ph{padding:8px 12px;font-size:12px;border-radius:8px}
+
+            .hero{flex-direction:column;padding:20px 0 40px;gap:25px;display:flex}
+            .hero-l, .hero-r{display:contents} /* UNWRAP FOR REORDERING */
+
+            h1{order:1;font-size:22px;text-align:center;margin-bottom:0}
+            .ruler{order:2;margin:0;max-width:100%;align-items:center;gap:15px}
+            .hero-r{order:3}
+            .stats-container{order:4}
+            
+            .ri{width:90px;height:50px;background:transparent}
+            .rt{font-size:13px}
+
+            .fc{order:3;width:100%;padding:25px 20px;border-radius:12px;margin:0 auto}
+            .ft{display:none} /* HIDE TITLE ON MOBILE */
+            .btn{padding:16px}
+            .fi{padding:14px 18px}
+
+            .stats-container{
+                background:var(--card);
+                border:1px solid var(--border);
+                border-radius:12px;
+                padding:20px;
+                width:100%;
+                margin:0 auto;
+            }
+            .stats{flex-direction:column;gap:15px;margin-bottom:0}
+
+            /* FOOTER MOBILE */
+            footer{padding:30px 0}
+            .fcon{flex-direction:column;align-items:flex-start;gap:35px}
+            .fl{flex-direction:row;width:100%;gap:20px}
+            .fd{text-align:left;max-width:180px}
+            .fr{flex-direction:column;align-items:flex-start;gap:25px}
             .so{margin-top:5px}
         }
     </style>
@@ -108,18 +134,24 @@
     <div class="hero">
         <div class="hero-l">
             <h1>Neo klassika, klassika va Hi-Tech uslubidagi <span class="hl">premium eshiklar!</span></h1>
-            <div class="stats">
-                <div class="st">
-                    <div class="si"><svg viewBox="0 0 24 24"><path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.55 18.55 20 18 20H6C5.45 20 5 19.55 5 19V18H19V19Z"/></svg></div>
-                    <div class="stx">10 yildan buyon faoliyat yuritib kelmoqdamiz</div>
-                </div>
-                <div class="st">
-                    <div class="si"><svg viewBox="0 0 24 24"><path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11M8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11M8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13M16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z"/></svg></div>
-                    <div class="stx">7000 + mijozlarga xizmat ko'rsatdik</div>
+            
+            <div class="stats-container">
+                <div class="stats">
+                    <div class="st">
+                        <div class="si"><svg viewBox="0 0 24 24"><path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.55 18.55 20 18 20H6C5.45 20 5 19.55 5 19V18H19V19Z"/></svg></div>
+                        <div class="stx">10 yildan buyon faoliyat yuritib kelmoqdamiz</div>
+                    </div>
+                    <div class="st">
+                        <div class="si"><svg viewBox="0 0 24 24"><path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11M8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11M8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13M16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z"/></svg></div>
+                        <div class="stx">7000 + mijozlarga xizmat ko'rsatdik</div>
+                    </div>
                 </div>
             </div>
+
             <div class="ruler">
-                <div class="ri"><img src="ruler.png" alt="O'lchov asbobi"></div>
+                <div class="ri">
+                    <img src="ruler.png" alt="Ruler" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMDAgNjAiPjxwYXRoIGQ9Ik0wIDEwIEwxMDAgNjAgTDEwMCAxMCBaIiBmaWxsPSIjZmZkMDAwIi8+PHBhdGggZD0iTTAgMCBMMTAwIDUwIEwxMDAgMCBaIiBmaWxsPSIjMjIyIi8+PC9zdmc+'">
+                </div>
                 <p class="rt">Quyidagi formani to'ldirib, hoziroq bepul o'lchash xizmatiga yoziling</p>
             </div>
         </div>
@@ -130,7 +162,7 @@
                 <form id="leadForm">
                     <div class="fg"><input type="text" id="name" class="fi" placeholder="Ismingiz" required></div>
                     <div class="fg"><input type="tel" id="phone" class="fi" placeholder="Telefon raqamingiz" required></div>
-                    <div class="fg"><input type="number" id="amount" class="fi" placeholder="Nechta eshik olmoqchisiz?" required min="1"></div>
+                    <div class="fg"><input type="text" id="amount" class="fi" placeholder="Nechta eshik olmoqchisiz ?" required></div>
                     <button type="submit" class="btn" id="submitBtn">
                         <span id="btnText">Ro'yxatdan o'tish</span>
                         <div class="ld" id="btnLoader"></div>
@@ -145,8 +177,8 @@
             <div class="fl">
                 <div class="logo">
                     <div class="logo-e">EST 2016</div>
-                    <div class="logo-t" style="font-size:20px">NOVZA</div>
-                    <div class="logo-s" style="font-size:8px">ESHIKLARI</div>
+                    <div class="logo-t" style="font-size:18px">NOVZA</div>
+                    <div class="logo-s" style="font-size:7px">ESHIKLARI</div>
                 </div>
                 <div class="fd">buyurtma asosida eshik ishlab chiqaruvchi kompaniya</div>
             </div>
