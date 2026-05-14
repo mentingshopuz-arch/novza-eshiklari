@@ -171,6 +171,7 @@
                         <span class="flag">🇺🇿</span>
                         <input type="tel" id="phone" class="fi pi" placeholder="Telefon raqamingiz" required>
                     </div>
+                    <div class="fg"><input type="text" id="region" class="fi" placeholder="Qayerdansiz?" required></div>
                     <div class="fg"><input type="text" id="amount" class="fi" placeholder="Nechta eshik olmoqchisiz ?" required></div>
                     <button type="submit" class="btn" id="submitBtn">
                         <span id="btnText">Ro'yxatdan o'tish</span>
@@ -223,11 +224,11 @@ const BOT_TOKEN='8684587692:AAFENQrRxVCaHtsNLfD9SIcrGZNnsKBr6e0';
 const CHAT_ID='-1003975382066';
 document.getElementById('leadForm').addEventListener('submit',function(e){
     e.preventDefault();
-    const n=document.getElementById('name').value,p=document.getElementById('phone').value,a=document.getElementById('amount').value;
+    const n=document.getElementById('name').value,p=document.getElementById('phone').value,r=document.getElementById('region').value,a=document.getElementById('amount').value;
     const bt=document.getElementById('btnText'),bl=document.getElementById('btnLoader'),sb=document.getElementById('submitBtn');
     bt.style.display='none';bl.style.display='block';sb.disabled=true;
     const src=window.location.href;
-    const msg=`🔔 <b>Yangi Buyurtma!</b>\n\n👤 <b>Ism:</b> ${n}\n📞 <b>Telefon:</b> ${p}\n🚪 <b>Eshiklar soni:</b> ${a} ta\n\nManba: ${src}`;
+    const msg=`🔔 <b>Yangi Buyurtma!</b>\n\n👤 <b>Ism:</b> ${n}\n📞 <b>Telefon:</b> ${p}\n📍 <b>Manzil:</b> ${r}\n🚪 <b>Eshiklar soni:</b> ${a} ta\n\nManba: ${src}`;
     if(BOT_TOKEN==='SIZNING_BOT_TOKENINGIZ'){setTimeout(()=>{showSuccess();reset(bt,bl,sb);e.target.reset()},800);return}
     fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CHAT_ID,text:msg,parse_mode:'HTML'})})
     .then(r=>r.json()).then(()=>{showSuccess();e.target.reset()}).catch(()=>alert("Xatolik yuz berdi")).finally(()=>reset(bt,bl,sb));
